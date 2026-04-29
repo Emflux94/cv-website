@@ -95,17 +95,7 @@ header h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:800;color:#fff;letter-spa
   border:1px solid var(--border);
   border-radius:12px;
   padding:1.4rem 1.6rem;
-  transition:border-color 0.3s,box-shadow 0.3s,transform 0.2s ease-out;
-  will-change:transform;
-  overflow:hidden;
 }
-/* Mouse glow */
-.card::before{content:'';position:absolute;width:250px;height:250px;border-radius:50%;
-  background:radial-gradient(circle,rgba(103,232,249,0.1),transparent 70%);
-  left:var(--gx,-100px);top:var(--gy,-100px);transform:translate(-50%,-50%);
-  opacity:0;transition:opacity 0.3s;pointer-events:none}
-.card:hover::before{opacity:1}
-.card:hover{border-color:var(--border-h);box-shadow:0 4px 30px rgba(103,232,249,0.06)}
 
 /* ── About ── */
 #about p{font-size:0.98rem;line-height:1.85;margin-bottom:0.5rem}

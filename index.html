@@ -65,7 +65,7 @@
     <section id="about" class="section fade-in">
       <div class="container narrow">
         <div class="section-label"><span>01</span> Om mig</div>
-        <div class="card" data-tilt>
+        <div class="card">
           <p>
             IT-säkerhetsspecialist med fokus på offensiv säkerhet, penetrationstester och sårbarhetsanalyser.
             Jag drivs av nyfikenhet och viljan att förstå hur system faktiskt fungerar – hur de kan angripas,
@@ -83,17 +83,17 @@
       <div class="container">
         <div class="section-label"><span>02</span> Kompetenser</div>
         <div class="skills-grid">
-          <div class="card" data-tilt>
+          <div class="card">
             <div class="skill-icon">🔓</div>
             <h3>Offensiv säkerhet</h3>
             <ul><li>Penetrationstestning</li><li>Sårbarhetsanalys</li><li>Incidenthantering</li></ul>
           </div>
-          <div class="card" data-tilt>
+          <div class="card">
             <div class="skill-icon">⚙️</div>
             <h3>Teknik</h3>
             <ul><li>Python</li><li>Nätverk</li><li>Kubernetes</li><li>Virtualisering & Cloud</li><li>Kryptering</li></ul>
           </div>
-          <div class="card" data-tilt>
+          <div class="card">
             <div class="skill-icon">🧠</div>
             <h3>Personligt</h3>
             <ul><li>Lösningsfokuserad</li><li>Lugn & metodisk</li><li>Nyfiken</li><li>Flexibel</li></ul>
@@ -108,7 +108,7 @@
         <div class="timeline">
           <article class="tl-item">
             <div class="tl-dot active"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <div class="card-top"><span class="date">2025 – 2026</span><span class="badge">Nuvarande</span></div>
               <h3>Security Engineer / Penetration Tester</h3>
               <span class="org">Ericsson</span>
@@ -122,7 +122,7 @@
           </article>
           <article class="tl-item">
             <div class="tl-dot"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <span class="date">2019 – 2024</span>
               <h3>Front Desk Manager</h3>
               <span class="org">Nääs Fabriker Hotell & Restaurang</span>
@@ -130,7 +130,7 @@
           </article>
           <article class="tl-item">
             <div class="tl-dot"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <span class="date">2014 – 2019</span>
               <h3>Butikssäljare</h3>
               <span class="org">Dormy Golf & Fashion</span>
@@ -146,7 +146,7 @@
         <div class="timeline">
           <article class="tl-item">
             <div class="tl-dot active"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <div class="card-top"><span class="date">2024 – 2026</span><span class="badge">Nuvarande</span></div>
               <h3>IT-säkerhetsspecialist</h3>
               <span class="org">IT-högskolan</span>
@@ -159,7 +159,7 @@
           </article>
           <article class="tl-item">
             <div class="tl-dot"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <span class="date">2016</span>
               <h3>Traumamedveten omsorg / Konflikthantering</h3>
               <span class="org">Lerums kommun / Polisen</span>
@@ -167,7 +167,7 @@
           </article>
           <article class="tl-item">
             <div class="tl-dot"></div>
-            <div class="card" data-tilt>
+            <div class="card">
               <span class="date">2010 – 2013</span>
               <h3>Naturvetenskap</h3>
               <span class="org">Lerums gymnasium</span>
@@ -231,17 +231,6 @@
   (function(){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:0.06});
     document.querySelectorAll('.fade-in').forEach(el=>o.observe(el));
   })();
-
-  /* 3D tilt on cards */
-  document.querySelectorAll('[data-tilt]').forEach(card=>{
-    card.addEventListener('mousemove',e=>{
-      const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-0.5,y=(e.clientY-r.top)/r.height-0.5;
-      card.style.transform=`perspective(600px) rotateY(${x*6}deg) rotateX(${-y*6}deg) scale(1.01)`;
-      card.style.setProperty('--gx',e.clientX-r.left+'px');
-      card.style.setProperty('--gy',e.clientY-r.top+'px');
-    });
-    card.addEventListener('mouseleave',()=>{card.style.transform='';});
-  });
 
   /* Smooth scroll */
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
