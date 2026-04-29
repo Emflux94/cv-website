@@ -53,7 +53,7 @@ header{position:relative;min-height:70vh;min-height:70dvh;display:flex;align-ite
 .hero-content{position:relative;z-index:2;padding:1.5rem}
 
 .avatar-wrap{position:relative;display:inline-block;margin-bottom:1.5rem}
-.avatar-glow{position:absolute;inset:-12px;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan),var(--purple),var(--blue),var(--cyan));opacity:0.35;filter:blur(18px)}
+.avatar-glow{display:none}
 .avatar-ring{display:inline-block;padding:3px;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan),var(--purple),var(--blue),var(--cyan))}
 .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--bg)}
 
